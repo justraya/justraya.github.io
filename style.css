@@ -1,0 +1,316 @@
+/* stylesheet */
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    background: #fae4d5;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+body .home {
+    font-size: 50px;
+    color: #fc9f94;
+    line-height: 0;
+    margin-top: 120px;
+}
+
+body .blog {
+    color: #abbdb1;
+    background-color: #fcdbcf;
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+body .blog .blogtitle {
+    line-height: 0;
+}
+
+body .contact {
+    font-size: 50px;
+    color: #fc9f94;
+    padding-top: 80px;
+    line-height: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+* {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 50px;
+}
+
+.home .homecontainer {
+    display: flex;
+    justify-content: center;
+}
+
+#homeinfo {
+    width: 50%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeinfo p {
+    background-color: #fa8f82;
+    opacity: 0.7;
+    padding: 15px;
+    color: #e9f7ed;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+}
+
+#homeinfo img {
+    margin-right: 40px;
+    --g: 4px;
+    --b: 8px;
+    --c: #faa876;
+
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+ #homeinfo img:hover {
+    --_p: 75%;
+}
+
+hr.rounded {
+    border: 0;
+    border-top: 5px solid #fc9f94;
+    width: 70%;
+    margin-top: 0%;
+    border-radius: 12px;
+}
+
+hr.square {
+    border: 0;
+    border-top: 4px solid #abbdb1;
+    width: 70%;
+    margin: auto;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.gallery-unit {
+    background-color: #fcdbcf;
+    padding: 30px;
+    padding-bottom: 50px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+.gallery-unit img {
+    object-fit: cover;
+    background-color: #fcdbcf;
+    margin-bottom: 20px;
+    border-color: #faa876;
+    --color: #faa876;
+    --border: 8px;
+    --offset: 10px;
+    --gap: 4px;
+
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding: 
+      calc(var(--gap) + var(--border))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border));
+    background: 
+      linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+      linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.2);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.gallery-unit img:hover {
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+}
+
+.desc p {
+    font-size: 16px;
+    text-align: center;
+    background-color: #abbdb1;
+    padding: 5px;
+    color: #fff1f0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+    line-height: 1.5;
+}
+
+#stupid-button {
+    background-color: #fcdbcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 90px;
+}
+
+#stupid-button button {
+    background-color: #fa8f82;
+    border: solid #fa8f82 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+#stupid-button button a {
+    color: #fff1f0;
+}
+
+#stupid-button button:hover {
+    transition: 500ms;
+    padding: 10px 40px;
+    transform: translateY(-0px);
+}
+
+#contactinfo {
+    padding-bottom: 410px;
+    padding-top: 35px;
+}
+
+.contactlinks {
+    width: 30%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contactlinks p {
+    background-color: #fa8f82;
+    opacity: 0.7;
+    padding: 15px;
+    color: #e9f7ed;
+    margin: 0px 15px;
+    display: grid;
+    row-gap: 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+}
+
+.contactlinks img {
+    padding: 20px 25px;
+    margin: 10px 25px;
+    border: 6px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px 0px;
+}
+
+.contactlinks img:hover {
+    border: solid 6px #faa876;
+    transition: 700ms;
+}
+
+.sidebar {
+    width: fit-content;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    height: 120px;
+    z-index: 10;
+    font-weight: 600;
+}
+
+.sidebar li a {
+    color: #faa876;
+}
+
+.sidebar .nav {
+    flex: 1;
+    text-align: right;
+    margin-right: 40px;
+    margin-top: 60px;
+    list-style-position: inside;
+    direction: rtl;
+    list-style-image: url("emptyheart.png");
+}
+
+.sidebar .nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar .nav li span{
+    position: relative;
+    right: 20px;
+    bottom: 3px;
+}
+
+.sidebar .nav li:hover {
+    list-style-image: url("filledheart.png");
+    transition: 600ms;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #abbdb1 transparent;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #abbdb1;
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
