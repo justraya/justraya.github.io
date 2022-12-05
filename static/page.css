@@ -65,6 +65,11 @@ body {
     max-height: 400px;
 }
 
+.post a {
+    color: #e9f7ed;
+    text-decoration: underline;
+}
+
 .rounded {
     border: 0;
     border-top: 3px solid #e9f7ed;
